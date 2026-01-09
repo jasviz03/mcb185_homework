@@ -1,6 +1,7 @@
 # mcb185_homework
 for mcb 185 with korf
 
-hello world
+hi
 
-# MCB 185#
+
+what does this do
