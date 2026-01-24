@@ -120,5 +120,10 @@ def geomean(q, w, e):
 	
 print(geomean(1, 2, 3))
 
+# find the area of a sphere 
+def sphere_area(r): 
+	return (4 * math.pi * (r**2))
+
+print(sphere_area(2))
 
 
