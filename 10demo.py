@@ -59,4 +59,66 @@ def pytha(c,d):
 
 print(pytha(3,4))
 
+"""
+Let's talk about block structure
+Blocks show hierarchy
+all of the code is "owned by the function" is intended by one level
+very much like an outline or journal article
+
+If there is only one statement in the block, indentation can be omitted
+
+ex: 
+def pytha(a, b): return math.sqrt(a**2 + b**2)
+"""
+#Let's write some functions
+
+#function that calculates the area of a circle 
+def circle_area(r): 
+	return math.pi * r**2
+
+print (circle_area(3))
+
+#function that calculates the area of a rectangle
+def rectangle_area(l, w): 
+		return (l* w)
+
+print(rectangle_area(3,4))
+
+#function that converts fahrenheit to celsius 
+def ftoc(f): 
+	return((f-32)* 5/9 )
+
+print(ftoc(32))
+#function that converts celsius to fahrenheit
+def ctof(c): 
+	return (c * 9/5 + 32 )
+	
+print(ctof(-40))
+
+#function that converts feet to centimeters
+def fttocm(x): 
+	return(x * 12 * 0.0254 / 10**(-2))
+
+print(fttocm(1))
+
+#fucntion that converts ounces to milliliters
+def ounce_to_ml(ounce): 
+	return (ounce / 33.814 / 10**(-2))
+
+print(ounce_to_ml(33.814))
+
+#find the arithmetic mean of 3 numbers
+
+def mean(a, b, c): 
+	return ((a+ b + c)/3)
+	
+print(mean(1, 2 ,3))
+
+# find the geometric mean of 3 numbers (i didn't know the difference)
+def geomean(q, w, e): 
+	return math.sqrt(q * w * e)
+	
+print(geomean(1, 2, 3))
+
+
 
