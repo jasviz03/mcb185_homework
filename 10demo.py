@@ -126,4 +126,170 @@ def sphere_area(r):
 
 print(sphere_area(2))
 
+#strings are a sequence of characters written inside quotes; can include letters, numbers, symbols and spaces
+s = 'hello world'
+print(s, type(s))
+
+#conditional statements
+
+"""
+makes choices about what we do next 
+ = is used for an assignment
+== is an equal sign
+"""
+a = 3
+b = 2
+
+print(a,b)
+
+if a == b: 
+	print('a equals b')  #block structure
+
+def is_even(x):
+	if x % 2 == 0: return True
+	return False
+	
+print(is_even(2))
+print(is_even(3))
+	
+#boolean; can have a value of true or false
+c = a == b
+print(c)
+print(type(c))
+
+#can be formatted like this if there is not multiple statements
+
+if 	 a < b: print('a < b')
+elif a > b: print('a > b')	
+else: 		print('a == b') 
+
+#if-elif-else construct, only the first condition is executed
+
+if    a < b: print( 'a < b ')
+elif a <= b: print( ' a <= b ') 
+elif a == b: print( 'a ==b ') # this will never print!!!
+
+#boolean chains; can be chained with 'and', 'or' and inverted with 'not'
+if a < b or a > b: print( 'all things equal, a and b are are not')
+if a < b and a > b: print('you are living in a strange world')
+if not False: print(True)
+
+#floating point warning 
+a = 0.3 
+b = 0.1 * 3 
+
+print (a, b)
+
+if     a < b: print('a < b ')
+elif   a > b: print('a > b ')
+else:         print('a == b')
+
+"""
+running this code will report that 
+a < b
+NEVER test for an inequality with floating point numbers
+"""
+
+print(abs(a-b))									#examine their difference
+if abs(a-b) < 1e-9: print(' close enough ')		#if there is a less than acceptable
+												#precision, consider them the same
+												
+#we can use math.isclose instead of doing it manually
+if math.isclose (a, b): print( ' close enough ')
+
+#string comparison
+
+"""
+compared alphabetically, kinda 
+compared to their ASCII values
+"""
+
+s1 = 'A'
+s2 = 'B'
+s3 = 'a'
+if s1 < s2: print( ' A < B ')
+if s2 < s3: print ( ' B < a')
+
+""""
+#mismatched type error
+a = 1 
+s = 'G'
+if a < s: print( ' a < s ') 		#will result in a type error
+"""
+
+#none type
+def silly(m , x , b): 
+	y = m * x + b
+	
+print(silly(2, 3, 4))  #output is none
+
+#write a function that determines if a number is an integer
+def is_integer(a): 
+	r = a % 1 
+	if math.isclose (0,r): return True
+	else: 				   return False
+	
+print(is_integer(3.0))
+
+
+#write a function that determines if a number is a valid probability (number between 0 - 1)
+def is_prob(b): 
+	if b<= 1 and b>= 0: print('is a valid probability')
+	else: 				print('not a probability')
+
+(is_prob(0.89))										#do not need a print here
+													#sends value back to the function
+"""
+write a function that returns the molecular weight of a DNA letter. 
+if the letter does not match any nucleotide, return None
+"""
+
+def nucleotide_weight(base): 
+	if base == 'A': 
+		return 331
+	elif base == 'T': 
+		return 322			
+	elif base == 'G': 
+		return 347 		
+	elif base == 'C':
+		return 307		
+	else: 
+		return None
+		
+print(nucleotide_weight('A'), 'Da', sep = ' ')
+
+"""
+write a function that returns the complement 
+of a DNA letter, returning None if the letter isn't DNA
+"""
+
+def DNA_complement(base): 
+	if base == 'A'  :  
+		return 'T' 
+	elif base == 'T': 
+		return 'A'
+	elif base == 'G': 
+		return 'C'
+	elif base == 'C': 
+		return 'G'
+	else: 
+		return None
+		
+print(DNA_complement('U'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
