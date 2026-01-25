@@ -277,19 +277,91 @@ def DNA_complement(base):
 		
 print(DNA_complement('U'))
 
+"""
+style is important for coding 
+another coder being able to understand your code is important
+code with poor style is confusing 
+and difficult to maintain/extend
 
 
 
+naming conventions 
+x : can represent anything, but often a float
+i, j, k are loop variables
+n, m are integers
+a, b, and c are numbers
+x, y, and z are floats/cartesian coordinates 
+p, q are probabilities
+s, including s1, and s2 are a list of strings
+X is a list of numbers
+P, Q are probability distributions 
+nt represent nucleotides
+dna is a string of nucleotide symbols
+aa represents amino acids
+seq is a string of aa or nucleotides 
+seqs is a list of sequences 
+file is a named file path 
+fp is a file pointer
+"""
+
+#write a function that returns the maximum of 3 numbers; returns the single largest one
+def maxofthree(n, m, o): 
+	if n > m: 
+		return n 
+	elif m > o: 
+		return m 
+	else: 
+		return o 
+		
+print(maxofthree(1,2,3))
+
+"""
+given values for true positives, true negatives, and false negatives
+write functions that return specificity, sensitivity, and F1 score 
+"""
+
+TN = 6
+TP = 8
+FN = 2
+FP = 1
+
+def specificity(TN, FP): 
+	return TN / (TN + FP)
+	
+def sensitivity(TP, FN): 
+	return TP / (TP + FN)
+
+def f1score(TP, FP, FN): 
+	return (2 * TP) / (2 * TP + FP + FN)
+
+print('sensitivity:',  sensitivity(TP, FN))
+print('specificity:',  specificity(TN, FP))
+print('F1 Score:', 	   f1score(TP, FP, FN))
 
 
+"""
+write the function that returns the Shannon entropy 
+for nucleotide counts A, C, G, T. It should work 
+in the case where there are zero counts for one 
+or more letters. 
+"""
 
+#i don't know what shannon entropy is. time to find out. 
+#shannon entropy is a standard measure of order state of symbol sequences
 
+def shannon_entropy(A, C, G, T): 
+	counts = [A, C, G, T]
+	total= sum(counts)         #total number of nucleotides
 
-
-
-
-
-
-
-
+	if total == 0: 
+		return 0  #no nucleotides, so entropy is 0 
+		
+	entropy = 0
+	for count in counts: 
+		if count > 0: 		# skips zero counts to avoid log2(0)
+			p = count / total
+			entropy -= p * math.log2(p) #Shannon formula
+		return entropy
+		
+print(shannon_entropy(30,0,0,0))
 
