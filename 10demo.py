@@ -365,3 +365,47 @@ def shannon_entropy(A, C, G, T):
 		
 print(shannon_entropy(30,0,0,0))
 
+ reset 
+ 
+"""
+Iteration
+
+while is a simple loop; can be evaluated as true or false
+
+while True: 
+	print('Hello')
+	
+We can break a loop with the 'break' statement 
+
+i = 0 
+while True: 
+	i = i + 1
+	print('hey', i)	
+	if i == 3: break
+
+Better way to break a while loop is to provide a condition where the Boolean
+expression is no longer true
+
+i = 0
+while i < 3: 
+	i = i + 1
+	print('hey', i)
+
+Loops can start at other numbers, does have to increment at 1, or end 
+before 5. This one starts at 1, ends before 10, and skips by 3s. 
+
+i = 1 
+while i < 10: 
+	print (i)
+	i = i + 3
+print('the final value of i is', i)
+"""
+
+
+
+
+
+
+
+
+
